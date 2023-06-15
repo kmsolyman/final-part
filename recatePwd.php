@@ -1,8 +1,38 @@
-<!DOCTYPE html>
+<?php
+  $servername = "localhost";
+  $username ="root";
+  $password ="";
+  $dbname ="project";
+
+  $conn = mysqli_connect($servername,$username,$password,$dbname);
+      if($conn)
+       {
+        echo "";
+       }
+       else
+       {
+        echo "connect faild";
+       }
+?>
+
+<?php
+echo $id  = $_GET['id'];
+$query  = "SELECT * FROM users where id='$id'";
+$data   = mysqli_query($conn,$query);
+$total  = mysqli_num_rows($data);
+$result = mysqli_fetch_assoc($data);
+?>
+<?php
+if(count($_POST)>0) {
+mysqli_query($conn,"UPDATE users set id='" . $_POST['id'] . "', email='" . $_POST['email'] . "', username='" . $_POST['username'] . "', password='" . $_POST['password'] ."' WHERE id='" . $_POST['id'] . "'");
+$message = "Record Modified Successfully";
+}
+$result = mysqli_query($conn,"SELECT * FROM users WHERE id='" . $_GET['id'] . "'");
+$row= mysqli_fetch_array($result);
+?>
 <html>
 <head>
-  <title>ForgetPassword</title>
-  <link rel="stylesheet" type="text/css" href="./style.css">
+<title>Update</title>
 </head>
 <style>
 	@import url('https://images.pexels.com/photos/957000/berchtesgaden-alpine-watzmann-berchtesgaden-national-park-957000.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
@@ -96,60 +126,31 @@ label a{
     color: #fff;
 }
 	</style>
-
 <body>
-  <div class="header">
-  	<h2>forgetPassword</h2>
-  </div>
-	 
-  <form method="POST" action="#">
-  	
-  	<div class="input-group">
-  		<label>Username</label>
-  		<input type="username"  value="username" name="username">
-  	</div>
-  	<div class="input-group">
-  		<button type="submit" class="btn" name="login_user">NEXT</button>
-  	</div>
-  	<p>
-  		Not yet a member? <a href="register.php">Sign up</a>
-  	</p>
-  </form>
+   <div class="header" class="input-group">
+<form class="input-group" name="frmUser" method="post" action="login.php">
+<div class="input-group"><?php if(isset($message)) { echo $message; } ?>
+</div>
+<div  class="input-group">
+<a href="retrieve.php">UPDATE</a>
+</div class="input-group">
+ ID: <br>
+<input  class="input-group"type="hidden" name="id" class="txtField" value="<?php echo $row['id']; ?>">
+<input  class="input-group" type="text" name="id"  value="<?php echo $row['id']; ?>">
+<br>
+Email: <br>
+<input class="input-group" type="text" name="email" class="txtField" value="<?php echo $row['email']; ?>">
+<br>
+Username :<br>
+<input  class="input-group" type="text" name="username" class="txtField" value="<?php echo $row['username']; ?>">
+<br>
+ Password:<br>
+<input class="input-group" type="text" name="password" class="txtField" value="<?php echo $row['password']; ?>">
+<br>
+<input class="input-group" type="submit" name="submit" value="Submit" class="buttom">
+
+</form>
+</div>
+
 </body>
 </html>
-<?php
-  $servername = "localhost";
-  $username ="root";
-  $password ="";
-  $dbname ="project";
-
-  $conn = mysqli_connect($servername,$username,$password,$dbname);
-      if($conn)
-       {
-        echo "";
-       }
-       else
-       {
-        echo "connect faild";
-       }
-?>
-
-<?php
-   if(isset($_POST['login_user']))
-   {
-	$username =$_POST['username'];
-	 
-	 $query  = "SELECT * FROM users WHERE username ='$username'";
-   $data   = mysqli_query($conn, $query);
-	 $total  = mysqli_num_rows($data);
-
-	   if($total == 1)
-	   {
-        header('location:recatePassword.php');
-	   }
-	   else
-	   {
-		   echo "User Email note Found";
-	   }
-   }
-?>

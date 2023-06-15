@@ -1,0 +1,60 @@
+<?php
+    if($_POST['submit'])
+	{
+	 $email      =$_POST['email'];
+	 $username   =$_POST['username'];
+	 $password   =$_POST['password'];
+
+	 $query = "UPDATE users SET email='$email',username='$username',password='$password' WHERE id='$id'";
+	 $data = mysqli_query($conn,$query);
+
+	 if($data)
+	 {
+	  echo "REcord Update";
+	 }
+	 else{
+		  echo "failed";
+	 }
+	}
+	
+   
+?>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>recatePwd</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="header">
+  	<h2>UPDATE</h2>
+  </div>
+	
+  <form method="POST" action="index.php">
+  
+  <div class="input-group">
+  	  <label>id</label>
+  	  <input type="id"  value="<?php echo $result['id']?>" name="id">
+  	</div>
+  <div class="input-group">
+  	  <label>Email</label>
+  	  <input type="email"  value="<?php echo $result['email']?>" name="email">
+  	</div>
+  <div class="input-group">
+  	  <label>Username</label>
+  	  <input type="username" value="<?php echo $result['username']?>" name="username">
+  	</div>
+  	<div class="input-group">
+  	  <label>Confirm password</label>
+  	  <input type="password"  value="<?php echo $result['password']?>" name="password">
+  	</div>
+  	<div class="input-group">
+  	  <input type="submit" class="btn"  value="Submit"  name="submit">
+  	</div>
+  	<p>
+  		Already a member? <a href="index.php">Sign in</a>
+  	</p>
+  </form>
+</body>
+</html>
+
