@@ -7,7 +7,7 @@
   $conn = mysqli_connect($servername,$username,$password,$dbname);
       if($conn)
        {
-        echo "";
+        echo "ok";
        }
        else
        {
@@ -16,20 +16,15 @@
 ?>
 
 <?php
-echo $id  = $_GET['id'];
+ $id  = $_GET['id'];
 $query  = "SELECT * FROM users where id='$id'";
 $data   = mysqli_query($conn,$query);
 $total  = mysqli_num_rows($data);
 $result = mysqli_fetch_assoc($data);
 ?>
-<?php
-if(count($_POST)>0) {
-mysqli_query($conn,"UPDATE users set id='" . $_POST['id'] . "', email='" . $_POST['email'] . "', username='" . $_POST['username'] . "', password='" . $_POST['password'] ."' WHERE id='" . $_POST['id'] . "'");
-$message = "Record Modified Successfully";
-}
-$result = mysqli_query($conn,"SELECT * FROM users WHERE id='" . $_GET['id'] . "'");
-$row= mysqli_fetch_array($result);
-?>
+
+
+
 <html>
 <head>
 <title>Update</title>
@@ -128,29 +123,64 @@ label a{
 	</style>
 <body>
    <div class="header" class="input-group">
-<form class="input-group" name="frmUser" method="post" action="login.php">
-<div class="input-group"><?php if(isset($message)) { echo $message; } ?>
+<form class="input-group" method="post" action="login.php">
 </div>
 <div  class="input-group">
-<a href="retrieve.php">UPDATE</a>
+<a href="login.php">UPDATE</a>
 </div class="input-group">
  ID: <br>
-<input  class="input-group"type="hidden" name="id" class="txtField" value="<?php echo $row['id']; ?>">
-<input  class="input-group" type="text" name="id"  value="<?php echo $row['id']; ?>">
+<input  class="input-group"type="hidden" name="id" class="txtField" value="<?php echo $result['id']; ?>">
+<input  class="input-group" type="text" name="id"  value="<?php echo $result['id']; ?>">
 <br>
 Email: <br>
-<input class="input-group" type="text" name="email" class="txtField" value="<?php echo $row['email']; ?>">
+<input class="input-group" type="text" name="email" class="txtField" value="<?php echo $result['email']; ?>">
 <br>
 Username :<br>
-<input  class="input-group" type="text" name="username" class="txtField" value="<?php echo $row['username']; ?>">
+<input  class="input-group" type="text" name="username" class="txtField" value="<?php echo $result['username']; ?>">
 <br>
  Password:<br>
-<input class="input-group" type="text" name="password" class="txtField" value="<?php echo $row['password']; ?>">
+<input class="input-group" type="text" name="password" class="txtField" value="<?php echo $result['password']; ?>">
 <br>
-<input class="input-group" type="submit" name="submit" value="Submit" class="buttom">
+<input class="input-group" type="submit" name="update" value="update" class="buttom">
 
 </form>
 </div>
 
 </body>
 </html>
+<?php
+if(isset($_POST['update']))
+{  
+  $servername = "localhost";
+  $username ="root";
+  $password ="";
+  $dbname ="project";
+
+  $conn = mysqli_connect($servername,$username,$password,$dbname);
+      if($conn)
+       {
+        echo "ok";
+       }
+       else
+       {
+        echo "connect faild";
+       }
+    
+    $id        = $_POST['id'];
+    $email     = $_POST['email'];
+    $username  = $_POST['username'];
+    $password  = $_POST['password'];
+ 
+$query  ="UPDATE users set id='$id',username='$username',email='$email',password='$password' WHERE id='$id'";
+$result = mysqli_query($conn,$query);
+
+if($result)
+{
+    echo'Data Updated';
+}
+else
+{
+    mysqli_close($connect);
+}
+}
+?>

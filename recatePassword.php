@@ -15,8 +15,6 @@
        }
 ?>
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -164,7 +162,7 @@ label a{
 				   <td>".$result['email']."</td>
 			       <td>".$result['username']."</td>
 			       <td>".$result['password']."</td>
-				   <td><a href='recatePwd.php?id=$result[id]&el=$result[email]&use=$result[username]&pass=$result[password]'>Update</a></td>
+				   <td><a href='recatePwd.php?id=$result[id]&email=$result[email]&username=$result[username]&password=$result[password]'>Update</a></td>
 
 		     </tr>
 			 ";

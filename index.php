@@ -354,7 +354,7 @@ body {
   width: 300px;
   height: 300px;
   border-radius: 40px;
-  background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
+  background-image: url('https://images.pexels.com/photos/589841/pexels-photo-589841.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -699,7 +699,7 @@ span.price {
 .containers {
   display:inline-block;
   position: relative;
-  width:19%;
+  width:23%;
 
 }
 
@@ -713,8 +713,8 @@ span.price {
   display:inline-block;
   position: absolute;
   bottom: 100%;
-  left: 200px;
-  right: 300px;
+  left: 2px;
+  right: 3px;
   background-color: #008CBA;
   overflow: hidden;
   width: 100%;
@@ -731,10 +731,10 @@ span.price {
 .text {
   display:inline-block;
   color: black;
-  font-size: 24px;
+  font-size: 4px;
   position: absolute;
-  top: 20%;
-  left: 50%;
+  top: 2%;
+  left: 0%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -745,8 +745,8 @@ span.price {
   color: black;
   font-size: 24px;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 5%;
+  left: 0%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -758,8 +758,8 @@ span.price {
   color: black;
   font-size: 24px;
   position: absolute;
-  top: 80%;
-  left: 50%;
+  top: 8%;
+  left: 0%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -767,8 +767,8 @@ span.price {
   border: 2px solid black;
   background-color: white;
   color: black;
-  padding: 14px 28px;
-  font-size: 16px;
+  padding: 1px 2px;
+  font-size: 6px;
   cursor: pointer;
   border-color: #ff9800;
   color: orange;
@@ -947,42 +947,35 @@ video{
   <a href="package.php"  class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PACKEGS</a>
   <a href="./contact.php" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
 </div>
+</section>
+<!-- Automatic Slideshow Images -->
 <section>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://images.pexels.com/photos/815880/pexels-photo-815880.jpeg?auto=compress&cs=tinysrgb&w=400" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Los Angeles</h3>
-      <p><b>We had the best time playing at Venice Beach!</b></p>   
-    </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://images.pexels.com/photos/208421/pexels-photo-208421.jpeg?auto=compress&cs=tinysrgb&w=400" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>New York</h3>
-      <p><b>The atmosphere in New York is lorem ipsum.</b></p>    
-    </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://images.pexels.com/photos/1308881/pexels-photo-1308881.jpeg?auto=compress&cs=tinysrgb&w=400" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Chicago</h3>
-      <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
-    </div>
-  </div>
+  <!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+<!-- Automatic Slideshow Images -->
 <div class="mySlides w3-display-container w3-center">
-    <img src="https://images.pexels.com/photos/1415131/pexels-photo-1415131.jpeg?auto=compress&cs=tinysrgb&w=400" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>New York</h3>
-      <p><b>The atmosphere in New York is lorem ipsum.</b></p>    
-    </div>
+  <img src="https://images.pexels.com/photos/2161449/pexels-photo-2161449.jpeg?auto=compress&cs=tinysrgb&w=400" style="width:100%">
+  <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+    <h3>Los Angeles</h3>
+    <p><b>We had the best time playing at Venice Beach!</b></p>   
   </div>
-  <div class="mySlides w3-display-container w3-center">
-  <img src="https://images.pexels.com/photos/879794/pexels-photo-879794.jpeg?auto=compress&cs=tinysrgb&w=400" style="width:100%">
-   <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Chicago</h3>
-      <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
-    </div>
+</div>
+<div class="mySlides w3-display-container w3-center">
+  <img src="https://images.pexels.com/photos/763771/pexels-photo-763771.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" style="width:100%">
+  <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+    <h3>New York</h3>
+    <p><b>The atmosphere in New York is lorem ipsum.</b></p>    
   </div>
+</div>
+<div class="mySlides w3-display-container w3-center">
+  <img src="https://images.pexels.com/photos/7245352/pexels-photo-7245352.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" style="width:100%">
+  <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+    <h3>Chicago</h3>
+    <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
+  </div>
+</div>
+
 </section>
 
 <!--prement  login Modal -->
@@ -1100,21 +1093,60 @@ video{
 </section>
 
 <!-- The seal 50 % off  Recently Viewed Adventures -->
+ <section>
+ <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div  class="snip1418" class="w3-third w3-margin-bottom">
+          <img src="https://images.pexels.com/photos/1496373/pexels-photo-1496373.jpeg?auto=compress&cs=tinysrgb&w=400" alt="New York" style="width:100%" class="w3-hover-opacity">
+          <div style="display:inline-block" class="add-to-cart"> <i class="ion-android-add"></i><span>-20% OFF</span></div>
 
-<section >
-  <figure style="display:inline-block" class="snip1418"><img src="https://images.pexels.com/photos/1874726/pexels-photo-1874726.jpeg?auto=compress&cs=tinysrgb&w=400" alt="sample92"  />
-  <div style="display:inline-block" class="add-to-cart"> <i class="ion-android-add"></i><span>-20% OFF</span></div>
-  <figcaption style="display:inline-block" >
-    <h3 style="display:inline-block">Zosaisan Invec</h3>
-    <p style="display:inline-block">If your knees aren't green by the end of the day, you ought to seriously re-examine your life. </p>
-    <div class="price" style="display:inline-block">
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star"></span>
-    <span class="fa fa-star"></span>
- </div>
-</section>
+          <div class="w3-container w3-white">
+            <p><b>New York</b></p>
+            <p class="w3-opacity">Fri 27 Nov 2016</p>
+            <div class="price">
+       <span class="fa fa-star checked"></span>
+       <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+       <span class="fa fa-star"></span>
+    
+      </div>
+          </div>
+        </div>
+       <div   class="snip1418" class="w3-third w3-margin-bottom">
+          <img src="https://images.pexels.com/photos/1662628/pexels-photo-1662628.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Paris" style="width:100%" style="height:300px" class="w3-hover-opacity">
+          <div style="display:inline-block" class="add-to-cart"> <i class="ion-android-add"></i><span>-20% OFF</span></div>
+
+          <div class="w3-container w3-white">
+            <p><b>Paris</b></p>
+            <p class="w3-opacity">Sat 28 Nov 2016</p>
+            <div class="price">
+       <span class="fa fa-star checked"></span>
+       <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+       <span class="fa fa-star"></span>
+    
+      </div>
+          </div>
+        </div>
+        <div  class="snip1418"  class="w3-third w3-margin-bottom">
+          <img src="https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=400" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <div style="display:inline-block" class="add-to-cart"> <i class="ion-android-add"></i><span>-20% OFF</span></div>
+
+          <div class="w3-container w3-white">
+            <p><b>San Francisco</b></p>
+            <p class="w3-opacity">Sun 29 Nov 2016</p>
+            <div class="price">
+       <span class="fa fa-star checked"></span>
+       <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+       <span class="fa fa-star"></span>
+  
+      </div>
+          </div>
+        </div>
+ </section>
 <!-- no name salid img hubber itali -->
 
 <section>
@@ -1530,24 +1562,6 @@ video{
                   <button class="textss">See More</button>     
            </div>
        </div>
-       <div class="containers" style="display:inline-block"  style="width:300px" style="height:300px">
-                  <img src="https://images.pexels.com/photos/5207636/pexels-photo-5207636.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Avatar" class="image" style="width:300px" style="height:300px">
-         <div class="overlay"  style="width:300px" style="height:300px">
-                  <img src="https://images.pexels.com/photos/5466393/pexels-photo-5466393.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Avatar" class="image" style="width:300px" style="height:300px">
-                  <h1 class="text"><b>Amazing Places</b></h1>
-                  <p class="texts">Find out what’s happening atal offers</p>
-                  <button class="textss">See More</button>     
-          </div>
-       </div>
-       <div class="containers" style="display:inline-block"  style="width:300px" style="height:300px" >
-                 <img src="https://images.pexels.com/photos/3617193/pexels-photo-3617193.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Avatar" class="image" style="width:300px" style="height:300px">
-          <div class="overlay"  style="width:300px" style="height:300px">
-               <img src="https://images.pexels.com/photos/3308746/pexels-photo-3308746.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Avatar" class="image" style="width:300px" style="height:300px">
-               <h1 class="text"><b>Amazing Places</b></h1>
-               <p class="texts">Find out what’s happening atal offers</p>
-                <button class="textss">See More</button>     
-         </div>
-       </div>
   </section>
 
 <!-- image nig mack galary--- TourRadar Spotlight -->
@@ -1588,7 +1602,6 @@ video{
 
       
 <!-- Ticket Modal -->
-
 <section>
   <div id="ticketModal" class="w3-modal">
     <div class="w3-modal-content w3-animate-top w3-card-4">
@@ -1608,9 +1621,6 @@ video{
       </div>
     </div>
   </div>
-
-
-  
 </section>
   
 <!-- revew -->
@@ -1739,28 +1749,6 @@ video{
       <p><b>The atmosphere in New York is lorem ipsum.</b></p>    
     </div>
   </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.pinimg.com/originals/b9/1e/70/b91e703e4ffa9391b6a55edad309f973.jpg" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Chicago</h3>
-      <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
-    </div>
-  </div>
-<div class="mySlides w3-display-container w3-center">
-    <img src="https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>New York</h3>
-      <p><b>The atmosphere in New York is lorem ipsum.</b></p>    
-    </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-  <img src="https://th.bing.com/th/id/OIP.Na4g2iEXuuudDLnssOFhsAHaEc?pid=ImgDet&rs=1" style="width:100%">
-
-  <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Chicago</h3>
-      <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
-    </div>
-  </div>
 </section>
 
 
@@ -1817,7 +1805,7 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
+  setTimeout(carousel, 3000);    
 }
 
 // Used to toggle the menu on small screens when clicking on the menu button
@@ -1886,7 +1874,7 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
+  setTimeout(carousel, 3000);    
 }
 
 // Used to toggle the menu on small screens when clicking on the menu button
