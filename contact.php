@@ -908,6 +908,69 @@ body {font-family: "Lato", sans-serif}
   <a href="contact.php" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
 </div>
 </section>
+
+<sections>
+    <div>
+      <h1 style="text-align: center"><b>SERVICES</b></h1>
+    </div>
+    <div>
+    <div class="cards" >
+        <img src="https://th.bing.com/th/id/R.e780db55109d72e3a43ba90ebd713631?rik=ZNjOAaEglMEDzA&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_221506.png&ehk=M9quQA6lwi0SExEd1HKt1%2fos9D%2fzFQFpmf7CAcWbBIw%3d&risl=&pid=ImgRaw&r=0" alt="Avatar" style="width:100%">
+        <h1 style="text-align: center">Affordable Hotels</h1>
+        <p>
+        With 24/7 customer service, flexible 
+        booking conditions and extensive insurance options, we are there for you when 
+        plans change. See my Options
+        </p>
+        </div>
+        <div class="cards" >
+        <img src="https://cdn2.iconfinder.com/data/icons/food-drinks-vol-2-1/48/052-512.png" alt="Avatar" style="width:100%">
+        <h1 style="text-align: center">Food And Drinks</h1>
+        <p>
+        With 24/7 customer service, flexible 
+        booking conditions and extensive insurance options, we are there for you when 
+        plans change. See my Options
+        </p>
+        </div>
+        <div class="cards" >
+        <img src="https://dynovoglobal.com/wp-content/uploads/2019/06/safety-icone.png" alt="Avatar" style="width:100%">
+        <h1 style="text-align: center">Safty Guide</h1>
+        <p>
+        With 24/7 customer service, flexible 
+        booking conditions and extensive insurance options, we are there for you when 
+        plans change. See my Options
+        </p>
+        </div>
+        <div class="cards" >
+        <img src="https://cdn0.iconfinder.com/data/icons/shopping-and-commerce-2-12/66/78-512.png" alt="Avatar" style="width:100%">
+        <h1 style="text-align: center">Around The World</h1>
+        <p>
+        With 24/7 customer service, flexible 
+        booking conditions and extensive insurance options, we are there for you when 
+        plans change. See my Options
+        </p>
+        </div>
+        <div class="cards" >
+        <img src="https://cdn1.iconfinder.com/data/icons/circle-saigon-attractions/40/035-airport-plane-flight-transport-512.png" alt="Avatar" style="width:100%">
+        <h1 style="text-align: center">Fast Travel</h1>
+        <p>
+        With 24/7 customer service, flexible 
+        booking conditions and extensive insurance options, we are there for you when 
+        plans change. See my Options
+        </p>
+        </div>
+        <div class="cards" >
+        <img src="https://cdn4.iconfinder.com/data/icons/positive-character-traits-alphabet-a/250/positive-A001-512.png" alt="Avatar" style="width:100%">
+        <h1 style="text-align: center">Adventures</h1>
+        <p>
+        With 24/7 customer service, flexible 
+        booking conditions and extensive insurance options, we are there for you when 
+        plans change. See my Options
+        </p>
+        </div>
+        </div>
+</sections>
+
 <!-- The Contact Section -->
 
 <section>
