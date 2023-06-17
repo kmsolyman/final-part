@@ -276,7 +276,6 @@ span.price {
             <p><b>New York</b></p>
             <p class="w3-opacity">Fri 27 Nov 2016</p>
             <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'"></button>
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
@@ -285,7 +284,6 @@ span.price {
             <p><b>Paris</b></p>
             <p class="w3-opacity">Sat 28 Nov 2016</p>
             <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'"></button>
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
@@ -294,7 +292,6 @@ span.price {
             <p><b>San Francisco</b></p>
             <p class="w3-opacity">Sun 29 Nov 2016</p>
             <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'"></button>
           </div>
         </div>
       </div>

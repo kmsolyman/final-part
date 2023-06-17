@@ -984,17 +984,17 @@ body {font-family: "Lato", sans-serif}
             <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
           </div>
           <div class="w3-col m6">
-            <form action="/action_page.php" target="_blank">
+            <form  method="POST" action="#" target="_blank">
               <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
                 <div class="w3-half">
-                  <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                  <input class="w3-input w3-border" type="text" placeholder="Name" required  name="firstname">
                 </div>
                 <div class="w3-half">
-                  <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                  <input class="w3-input w3-border" type="text" placeholder="Email" required  name="email">
                 </div>
               </div>
-              <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-              <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+              <input class="w3-input w3-border" type="text" placeholder="Message" required  name="address">
+              <button class="w3-button w3-black w3-section w3-right" type="submit"  value="submit" class="btn"  name="submit">SEND</button>
             </form>
           </div>
         </div>
@@ -1011,7 +1011,7 @@ body {font-family: "Lato", sans-serif}
     <p class="w3-medium">Powered by <a href="./about.html" target="_blank">farjama Akter mim</a></p>
   </footer>
   <!--futter-->
-<!--prement  login Modal -->
+  <!--prement  login Modal -->
 <section>
   <div class="w3-content" style="max-width:2000px;margin-top:46px">
   <div id="login" class="w3-modal">
@@ -1129,8 +1129,113 @@ body {font-family: "Lato", sans-serif}
           <p class="w3-right"><a href="#" class="w3-text-blue"></a></p>
         </div>
   </section>
+  
+  
 
+
+  <script>
+    // Automatic Slideshow - change image every 4 seconds
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 4000);    
+    }
+    
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    var modal = document.getElementById('ticketModal');
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    var modal = document.getElementById('login');
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+    <script>
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+    
+    slider.oninput = function() {
+      output.innerHTML = this.value;
+    }
+    </script>
+    <script>
+        /* Demo purposes only */
+    $(".hover").mouseleave(function () {
+      $(this).removeClass("hover");
+    });
+    
+    
+    </script>
+    
+    
+    <script>
+    
+    function videoslider(links){
+        document.querySelector(".slider").src = links;
+    }
+    
+    </script>
+
+</body>
+</html>
+
+  <?php
+    $servername = "localhost";
+    $username ="root";
+    $password ="";
+    $dbname ="bilregister";
   
+    $conn = mysqli_connect($servername,$username,$password,$dbname);
+        if($conn)
+         {
+          echo "";
+         }
+         else
+         {
+          echo "connect faild";
+         }
   
+  ?>
+  <?php
+       if(isset($_POST['submit']))
+      {
+        $_firstname  = $_POST['firstname'];
+        $_email      = $_POST['email'];
+        $_address    = $_POST['address'];
+   
+    
+       $query = "INSERT INTO  bilform VALUES('$_firstname','$_email','$_address')";
+  
+             $data = mysqli_query($conn,$query);
+      }
+  ?>
+  </section>
 </body>
 </html>

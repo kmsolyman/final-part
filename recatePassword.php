@@ -117,7 +117,7 @@ label a{
 <div class="header">
   	<h2>RecatePassword</h2>
   </div>
- <form method="POST" action="#">
+ <form method="POST" action="forgate.php">
   	
   	<div class="input-group">
   		<label>Email</label>
@@ -140,38 +140,14 @@ label a{
 	 
 	 $total  = mysqli_num_rows($data);
      
-	 if($total != 0)
-	 {
-		?>
-           <table border="3">
-			<tr>
-			    <th width="10%">id</th>
-			    <th width="30%">Email</th>
-				<th width="30%">USERNAME</th>
-				<th width="25%">CONFARM PASSWORD</th>
-				<th width="25%" style="color:red">Update</th>
-	        </tr>
-	      
-
-<?php
-		while($result = mysqli_fetch_assoc($data))
-		{
-			echo 
-			"<tr>
-			       <td>".$result['id']."</td>
-				   <td>".$result['email']."</td>
-			       <td>".$result['username']."</td>
-			       <td>".$result['password']."</td>
-				   <td><a href='recatePwd.php?id=$result[id]&email=$result[email]&username=$result[username]&password=$result[password]'>Update</a></td>
-
-		     </tr>
-			 ";
-		}
-}
-else
-{
-	echo "not print";
-}
+	 if($total == 1)
+	   {
+        header('location:forgate.php');
+	   }
+	   else
+	   {
+		   echo "User Email note Found";
+	   }
    }
 
 ?>
