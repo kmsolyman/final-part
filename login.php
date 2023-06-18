@@ -107,10 +107,6 @@ label a{
   </div>
 	 
   <form method="post" action="login.php">
-   <div class="input-group">
-  		<label>ID</label>
-  		<input type="number" name="ID" >
-  	</div>
 
   	<div class="input-group">
   		<label>Username</label>

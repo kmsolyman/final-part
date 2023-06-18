@@ -18,10 +18,18 @@
         
         <form action="process.php" method="post">
             <div class="form-elemnt my-4">
-                <input type="number" class="form-control" name="id" placeholder="id:">
+                <input type="" class="form-control" name="" placeholder="id">
             </div>
             <div class="form-elemnt my-4">
-                <input type="text" class="form-control" name="email" placeholder="Username:">
+                <input type="text" class="form-control" name="username" placeholder="username:">
+            </div>
+            </div>
+            <div class="form-elemnt my-4">
+                <input type="text" class="form-control" name="email" placeholder="email:">
+            </div>
+            </div>
+            <div class="form-elemnt my-4">
+                <input type="text" class="form-control" name="password" placeholder="password:">
             </div>
             <div class="form-elemnt my-4">
                 <select name="type" id="" class="form-control">
