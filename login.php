@@ -1,4 +1,3 @@
-<?php include('server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Ludiflex | Login</title>
+    <title> Login</title>
 </head>
 <style>
 	@import url('https://images.pexels.com/photos/957000/berchtesgaden-alpine-watzmann-berchtesgaden-national-park-957000.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
@@ -100,7 +99,35 @@ label a{
     text-decoration: none;
     color: #fff;
 }
-	</style>
+</style>
+    <style>
+.button {
+  background-color: #4CAF50; /* button */
+  border: none;
+  
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button3 {border-radius: 8px;}
+.button3 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+.button3:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+</style>
 <body>
 <div class="header">
   	<h2>Login</h2>
@@ -110,21 +137,49 @@ label a{
 
   	<div class="input-group">
   		<label>Username</label>
-  		<input type="text" name="username" >
+  		<input type="username" name="username" >
   	</div>
   	<div class="input-group">
   		<label>Password</label>
   		<input type="password" name="password">
   	</div>
   	<div class="input-group">
-  		<button type="submit" class="btn" name="login_user">Login</button>
+  		<button type="submit" class="btn" name="submit">Login</button>
   	</div>
-  	<p>
-  		Not yet a member? <a href="forgetPassword.php">forgatepassword</a>
+      <p>
+  		Not yet a member? <a href="updatepassword.php">UPdate</a>
   	</p>
-	  <p>
+	<p>
   		Not yet a member? <a href="register.php">Sign up</a>
   	</p>
   </form>
+  <p>
+    <a  href="forgetPassword.php" class="button button3">Admin</a>
+ </p>
 </body>
 </html>
+<?php
+     
+     if(isset($_POST['submit']))
+     {
+     $username =$_POST['username'];
+     $password =$_POST['password'];
+
+
+ $con=mysqli_connect("localhost","root","","project");
+ 
+ $sql="select * from users where username='$username' and password='$password'"; 
+ 
+$query=mysqli_query($con,$sql);
+// Return the number of rows in result set
+$res= mysqli_num_rows($query);
+
+if ($res==1) {
+	echo "Succesfully logged in";
+	header('location:index.php');
+}
+else{
+	echo "Invalid";
+}
+     }
+?>

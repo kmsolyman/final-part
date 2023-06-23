@@ -26,22 +26,13 @@
                 $row = mysqli_fetch_array($result);
                 ?>
                      <div class="form-elemnt my-4">
-                <input type="text" class="form-control" name="title" placeholder="Book Title:" value="<?php echo $row["id"]; ?>">
+                <input type="text" class="form-control" name="username" placeholder="Username :" value="<?php echo $row["username"]; ?>">
             </div>
             <div class="form-elemnt my-4">
-                <input type="text" class="form-control" name="author" placeholder="Author Name:" value="<?php echo $row["email"]; ?>">
+                <input type="text" class="form-control" name="email" placeholder="Email:" value="<?php echo $row["email"]; ?>">
             </div>
-            <div class="form-elemnt my-4">
-                <select name="type" id="" class="form-control">
-                    <option value="">Select Book Type:</option>
-                    <option value="Adventure" <?php if($row["type"]=="Adventure"){echo "selected";} ?>>Adventure</option>
-                    <option value="Crime" <?php if($row["type"]=="Crime"){echo "selected";} ?>>Crime</option>
-                    <option value="Fantasy" <?php if($row["type"]=="Fantasy"){echo "selected";} ?>>Fantasy</option>
-                    <option value="Horror" <?php if($row["type"]=="Horror"){echo "selected";} ?>>Horror</option>
-                </select>
-            </div>
-            <div class="form-element my-4">
-                <textarea name="description" id="" class="form-control" placeholder="Book Description:"><?php echo $row["description"]; ?></textarea>
+          <div class="form-element my-4">
+                <textarea name="Password" id="" class="form-control" placeholder="Password:"><?php echo $row["password"]; ?></textarea>
             </div>
             <input type="hidden" value="<?php echo $id; ?>" name="id">
             <div class="form-element my-4">
@@ -49,7 +40,7 @@
             </div>
                 <?php
             }else{
-                echo "<h3>Book Does Not Exist</h3>";
+                echo "<h3>Update Does Not Exist</h3>";
             }
             ?>
            

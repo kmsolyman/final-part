@@ -12,14 +12,11 @@
     <header class="d-flex justify-content-between my-4">
             <h1>UPDATE</h1>
             <div>
-            <a href="forgate.php" class="btn btn-primary">Back</a>
+            <a href="login.php" class="btn btn-primary">Back</a>
             </div>
         </header>
         
         <form action="process.php" method="post">
-            <div class="form-elemnt my-4">
-                <input type="" class="form-control" name="" placeholder="id">
-            </div>
             <div class="form-elemnt my-4">
                 <input type="text" class="form-control" name="username" placeholder="username:">
             </div>
@@ -30,18 +27,6 @@
             </div>
             <div class="form-elemnt my-4">
                 <input type="text" class="form-control" name="password" placeholder="password:">
-            </div>
-            <div class="form-elemnt my-4">
-                <select name="type" id="" class="form-control">
-                    <option value="">Problem:</option>
-                    <option value="Username">Username</option>
-                    <option value="Password">Password</option>
-                    <option value="Email">Email</option>
-                    <option value="Phone">Phone</option>
-                </select>
-            </div>
-            <div class="form-element my-4">
-                <textarea name="text" id="" class="form-control" placeholder="PASSWORD:"></textarea>
             </div>
             <div class="form-element my-4">
                 <input type="submit" name="create" value="Add Book" class="btn btn-primary">

@@ -29,13 +29,13 @@
                 $result = mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_array($result)) {
                  ?>
-                 <h3>Title:</h3>
+                 <h3>ID:</h3>
                  <p><?php echo $row["id"]; ?></p>
-                 <h3>Description:</h3>
+                 <h3>PASSWOED:</h3>
                  <p><?php echo $row["password"]; ?></p>
-                 <h3>Author:</h3>
+                 <h3>EMAIL:</h3>
                  <p><?php echo $row["email"]; ?></p>
-                 <h3>Type:</h3>
+                 <h3>Username:</h3>
                  <p><?php echo $row["username"]; ?></p>
                 
                  <?php

@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Registration system PHP and MySQL</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+	<title>Update Password</title>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
 </head>
 <style>
 	@import url('https://images.pexels.com/photos/957000/berchtesgaden-alpine-watzmann-berchtesgaden-national-park-957000.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
@@ -97,48 +102,37 @@ label a{
 }
 	</style>
 <body>
-  <div class="header">
-  	<h2>Register</h2>
+<div class="header">
+  	<h2>Update</h2>
   </div>
-	
-  <form method="post" action="register.php">
-  
-  	<div class="input-group">
-  	  <label>Username</label>
-  	  <input type="text" name="username">
-  	</div>
-  	<div class="input-group">
-  	  <label>Email</label>
-  	  <input type="email" name="email">
-  	</div>
-  	<div class="input-group">
-  	  <label>Password</label>
-  	  <input type="password" name="password">
-  	</div>
-  	<div class="input-group">
-  	  <label>Confirm password</label>
-  	  <input type="password" name="password">
-  	</div>
-  	<div class="input-group" >
-  	  <button type="submit" class="btn" name="submit">Register</button>
-  	</div>
-  	<p>
-  		Already a member? <a href="login.php">Sign in</a>
-  	</p>
-  </form>
+<form method="POST" action="update_data.php">
+<div  class="input-group">
+<label>Username</label>
+<input type="text" name="username" placeholder="username"><br>	
+</div>
+<div  class="input-group">
+<label> new password</label>
+<input type="text" name="password" placeholder="password"><br>
+</div>
+<div  class="input-group">
+<input type="submit" name="registration">
+</div>
+</form>
+</div>
 </body>
 </html>
 <?php
-    if(isset($_POST['submit']))
-    {
-$username  =$_POST['username'];
-$email     =$_POST['email'];
-$password  =$_POST['password'];
+ if(isset($_POST['registration']))
+ {
+$username=$_POST['username'];
+$password=$_POST['password'];
 
-$db_connect =mysqli_connect("localhost","root","","project");
+$db_connect=mysqli_connect("localhost","root","","project");
 
-$query="insert into users(username,email,password) values('$username','$email','$password')";
-mysqli_query($db_connect, $query);
-header('location:login.php');
-    }
+ $query="update users set password = $password where username='$username'";
+
+ $data = mysqli_query($db_connect, $query);
+ header('location:login.php');
+
+ }
 ?>

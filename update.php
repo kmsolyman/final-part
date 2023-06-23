@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Registration system PHP and MySQL</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Ludiflex | Login</title>
 </head>
 <style>
 	@import url('https://images.pexels.com/photos/957000/berchtesgaden-alpine-watzmann-berchtesgaden-national-park-957000.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
@@ -97,48 +101,45 @@ label a{
 }
 	</style>
 <body>
-  <div class="header">
-  	<h2>Register</h2>
+<div class="header">
+  	<h2>Updatepassword</h2>
   </div>
-	
-  <form method="post" action="register.php">
-  
+	 
+  <form method="post" action="login.php">
+
   	<div class="input-group">
-  	  <label>Username</label>
-  	  <input type="text" name="username">
-  	</div>
-  	<div class="input-group">
-  	  <label>Email</label>
-  	  <input type="email" name="email">
+  		<label>Username</label>
+  		<input type="username" name="username" >
   	</div>
   	<div class="input-group">
-  	  <label>Password</label>
-  	  <input type="password" name="password">
+  		<label>Password</label>
+  		<input type="password" name="password">
   	</div>
   	<div class="input-group">
-  	  <label>Confirm password</label>
-  	  <input type="password" name="password">
-  	</div>
-  	<div class="input-group" >
-  	  <button type="submit" class="btn" name="submit">Register</button>
-  	</div>
-  	<p>
-  		Already a member? <a href="login.php">Sign in</a>
+	  <input type="submit" name="registration">
+    </div>
+	  <p>
+  		Not yet a member? <a href="login.php">Login</a>
   	</p>
   </form>
 </body>
 </html>
 <?php
-    if(isset($_POST['submit']))
-    {
-$username  =$_POST['username'];
-$email     =$_POST['email'];
-$password  =$_POST['password'];
+   if(isset($_POST['registration']))
+   {
+       $username=$_POST['username'];
+       $password=$_POST['password'];
 
-$db_connect =mysqli_connect("localhost","root","","project");
+       $db_connect=mysqli_connect("localhost","root","","project");
 
-$query="insert into users(username,email,password) values('$username','$email','$password')";
-mysqli_query($db_connect, $query);
-header('location:login.php');
-    }
+       $query ="update users set password ='$password' where username='$username'";
+
+         $data = mysqli_query($db_connect, $query);
+
+		 if(){
+			header('location:index.php');
+		 }
+          1
+}
+
 ?>
